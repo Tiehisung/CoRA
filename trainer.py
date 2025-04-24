@@ -163,8 +163,8 @@ class Trainer:
 
     def _create_optimizer(self):
         params = [
-            {"params": self.radiance_field.parameters(), "lr": 1e-3, "eps": 1e-15},
-            # {"params": self.camera_offset.parameters(), "lr": 1e-3, "eps": 1e-15},
+            # {"params": self.radiance_field.parameters(), "lr": 1e-3, "eps": 1e-15},
+            {"params": self.camera_offset.parameters(), "lr": 1e-3, "eps": 1e-15},
         ]
         self.optimizer = torch.optim.Adam(params=params)
         if self.cfg["train"]["warmup_steps"] > 0:
