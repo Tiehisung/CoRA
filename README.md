@@ -10,7 +10,7 @@
 
 This is a PyTorch implementation of the following paper:
 
-**High-Quality Facial Geometry and Appearance Capture at Home**, CVPR 2024.
+**High-Quality Facial Geometry and Appearance Capture at Home with Automatic Eyeball Estimation**, CVPR 2024.
 
 Yuxuan Han, Junfeng Lyu, and Feng Xu
 
@@ -41,7 +41,7 @@ Please cite the following paper if it helps your research:
 
     @inproceedings{han2024cora,
         author = {Han, Yuxuan and Lyu, Junfeng and Xu, Feng},
-        title = {High-Quality Facial Geometry and Appearance Capture at Home},
+        title = {High-Quality Facial Geometry and Appearance Capture at Home with Automatic Eyeball Estimation},
         journal={CVPR},
         year={2024}
     }

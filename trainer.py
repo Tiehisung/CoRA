@@ -84,6 +84,11 @@ class Trainer:
     def _create_model(self):
         cfg = self.cfg
         opt = self.opt
+        # Automatically estimate eyeball position and radius if not provided
+        if "eyeball" not in self.cfg["data"]:
+            from cora.utils import estimate_eyeballs_from_images
+            pl, pr, r = estimate_eyeballs_from_images(self.train_dataset)
+            self.cfg["data"]["eyeball"] = {"pl": pl.tolist(), "pr": pr.tolist(), "radius": r}
         self.bound = self.cfg["data"]["bound"]
         self.radiance_field = Network(cfg)
         self.radiance_field.to(self.device)
